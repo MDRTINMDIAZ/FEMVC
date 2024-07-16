@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FE.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+
+
+    <header>
+
+        <div class="xCabecera container-sm" style="border:1px solid gray; height:110px; width:900px; margin-top:5px; border-radius:8px; padding:0px;">
+
+            <nav class="xColorBarra navbar navbar-expand-lg navbar-light" style="height:20px; width:100%; top:88px; border-radius:0px 0px 8px 8px;">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav" s style="font-weight:bold;">
+
+                            <li class="nav-item dropdown">
+                                <a class="xTexto9 nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkCatalogos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Catálogos
+                                </a>
+                                <ul class="dropdown-menu xTexto9 xFondoMenu xColorBarra" aria-labelledby="navbarDropdownMenuLinkCatalogos" style="">
+                                    <li><a class="dropdown-item" href="#">Usuarios y Accesos</a></li>
+                                    <li><a class="dropdown-item" href="#">Domicilios Fiscales/Sucursales</a></li>
+                                    <li><a class="dropdown-item" href="#">Impuestos y Retenciones</a></li>
+                                    <li><a class="dropdown-item" href="#">Clientes</a></li>
+                                    <li><a class="dropdown-item" href="#">Productos/Servicios</a></li>
+                                    <li><a class="dropdown-item" href="#">Tipo de CFDIs.</a></li>
+                                    <li><a class="dropdown-item" href="#">Monedas</a></li>
+                                    <li><a class="dropdown-item" href="#">Certificados CSD.</a></li>
+                                    <li><a class="dropdown-item" href="#">Folios</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="xTexto9 nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkMovimientos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Movimientos
+                                </a>
+                                <ul class="dropdown-menu xTexto9 xFondoMenu xColorBarra" aria-labelledby="navbarDropdownMenuLinkMovimientos" style="">
+                                    <li><a class="dropdown-item" href="#">Crear CFDI</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="xTexto9 nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkConsultas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Consultas
+                                </a>
+                                <ul class="dropdown-menu xTexto9 xFondoMenu xColorBarra" aria-labelledby="navbarDropdownMenuLinkConsultas" style="">
+                                    <li><a class="dropdown-item" href="#">Facturas por Emisor/Cliente</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("Salir", "UsuariosLogin")" class="nav-link" href="#">Salir</a>
+                            </li>
+
+
+                            @*                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                            </li>
+                            *@
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-sm" style="border:1px solid gray; width:900px; padding:0px; margin-top:3px; border-radius:8px 8px 0px 0px; overflow:hidden;" >
+            <div style="height:20px; text-align:center; font-weight:bold;" class="xColorBarra">
+                Inicio
+            </div>
+        </div>
+
+
+@*         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ *@
+    </header>
+    <div class="container-sm" style="border-top:0px solid red; border-left:1px solid gray;border-right:1px solid gray; 
+border-bottom:1px solid gray; padding:0px; background-color:white; width:900px; padding:0px;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted" >
+        <div class="container-sm" style="width:900px; background-color:white; border-radius:0px 0px 8px 8px;margin-bottom:10px; border:1px solid gray;">
+            Copyright (c) 2024 - www.laef4.prosan.com.mx - Powered by www.prosan.com.mx
+            </div>
+    </footer>
+
+
+@*     <footer class="border-top footer text-muted" style="border:2px solid black;">
+        <div class="container">
+            &copy; 2024 - FE - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+ *@    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

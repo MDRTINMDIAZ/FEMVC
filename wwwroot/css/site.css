@@ -1,0 +1,106 @@
+html {
+  font-size: 9pt;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-size: 9pt;
+
+    background-image: url(../Images/FondoLogin.svg);
+    background-color: #cccccc;
+}
+
+
+/*#####################################################*/
+.xColorBarra {
+    background-color: #B0C4DE;
+}
+.xTexto9 {
+    font-size:9pt;
+    /*font-weight:bold;*/
+}
+
+.xFondoMeu {
+    background-color:lightgray;
+}
+
+.xCabecera {
+    width: 900px;
+    height: 110px;
+    background-image: url(../Images/cabecera.jpg);
+}
+
+.footer {
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+    /*white-space: nowrap;*/
+    line-height: 40px;
+}
+
+
+
+
+
+/**LOADER STAR*************************************************************/
+.loader {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    opacity: .7;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+    .loader::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 5px solid white;
+        border-top-color: blue;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+    }
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-no-hidden {
+    opacity: .7;
+    visibility: visible;
+    background-color: red;
+}
+/**LOADER END*************************************************************/

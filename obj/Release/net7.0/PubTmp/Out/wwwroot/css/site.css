@@ -1,0 +1,46 @@
+html {
+  font-size: 9pt;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-size: 9pt;
+
+    background-image: url(../Images/FondoLogin.svg);
+    background-color: #cccccc;
+}
+
+
+/*#####################################################*/
+.xColorBarra {
+    background-color: #B0C4DE;
+}
+.xTexto9 {
+    font-size:9pt;
+    /*font-weight:bold;*/
+}
+
+.xFondoMeu {
+    background-color:lightgray;
+}
+
+.xCabecera {
+    width: 900px;
+    height: 110px;
+    background-image: url(../Images/cabecera.jpg);
+}

@@ -1,0 +1,44 @@
+﻿@model FE.models.Usuario
+
+@{
+    Layout = "~/views/shared/LayoutBT.cshtml";
+}
+
+<form asp-action="LogIn">
+    <div style="margin:auto; width:250px;">
+        <div class="row" style="font-size:9pt; width:250px; box-shadow: 0px 0px 15px 1px gray; border:1px solid lightgray ; border-radius:10px; display:flex; justify-content:center; margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); background-color:white;">
+            <img src="~/Images/LogoIni.jpg" style="margin-top:30px; margin-bottom:10px;" />
+            <div style="text-align:center; margin-bottom:10px;">
+                <small style="font-size:12pt; font-weight:bold;">LAEF Worldwide Logistics.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for-="Usr" style="margin-bottom:10px;">Usuario</label>
+                <input asp-for="Usr" style="margin-bottom:10px; font-size:9pt; padding-left:5; padding:3px 5px 3px 5px;" class="form-control" placeholder="" style="" autofocus >
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass" style="margin-bottom:10px;" for="idPassword">Contraseña</label>
+                <input asp-for="Pass" type="password" class="form-control" id="idPassword" placeholder="" style="font-size:9pt;padding-left:5; padding:3px 5px 3px 5px;">
+            </div>
+
+            @if (ViewData["xMsg"] != null)
+            {
+                <div style="font-size:9pt; border:0px solid red; margin-top:10px; margin-bottom:-20px;">
+                    <div class="alert alert-danger">
+                        @ViewData["xMsg"]
+                    </div>
+                </div>
+            }
+
+            <input type="submit" value="Ingresar" class="btn btn-primary my-4 " style="width:100px; font-size:9pt; margin-bottom:10px;" />
+
+            <div style="text-align:right; margin-bottom:10px;">
+                <small style="font-size:7pt;">Powered by www.prosan.com.mx (c) 2024.</small>
+            </div>
+        </div>
+    </div>
+</form>
+
+

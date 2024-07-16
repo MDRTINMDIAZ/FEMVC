@@ -1,0 +1,83 @@
+﻿@model IEnumerable<FE.models.Usuario>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pass)
+            </th>
+            <th>
+                    (@Html.DisplayNameFor(model => model.Nombre))
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idcliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idemisor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agesuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Appacc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idcliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idemisor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agesuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Appacc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Usr">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Usr">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Usr">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+
+
+</table>
+</body>
+</html>

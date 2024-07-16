@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\Inetpub\FEmvc\FE\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2024-07-10T17:56:10.0861787Z||;True|2024-07-09T17:56:12.8052222-06:00||;True|2024-07-08T21:15:37.2041596-06:00||;True|2024-07-08T21:15:29.0986637-06:00||;True|2024-07-08T21:10:31.6383563-06:00||;True|2024-07-08T21:06:27.3809245-06:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
